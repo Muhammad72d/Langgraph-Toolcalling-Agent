@@ -6,8 +6,8 @@ from agents.tools import search, calculator, get_weather
 load_dotenv()
 
 llm = ChatGoogleGenerativeAI(
-    model="gemini-1.5-flash-latest",
-    google_api_key=os.getenv("GEMINAI_KEY"),
+    model="gemini-1.5-flash",
+    google_api_key=os.getenv("GEMINI_KEY"),
     temperature=0.2,
     max_output_tokens=512
 )
