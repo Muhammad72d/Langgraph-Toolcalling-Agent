@@ -3,7 +3,7 @@ from agents.graph import app
 from agents.functions import extract_text
 
 st.set_page_config(
-    page_title="LangGraph Agent",
+    page_title="LangGraph Agent 🤖",
       page_icon="🤖"
       )
 
