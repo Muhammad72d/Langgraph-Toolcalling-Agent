@@ -64,9 +64,9 @@ def get_weather(location:str) -> str:
         current_weather = data["current"]
 
         return f""" location : {location}
-        temperature : {current_weather['temperature']}C
-        wind speed : {current_weather['windspeed']} km/h
-        wind direction : {current_weather['winddirection']} degrees"""
+        temperature : {current_weather['temperature_2m']}C
+        wind speed : {current_weather['wind_speed_10m']} km/h
+        wind direction : {current_weather['wind_direction_10m']} degrees"""
 
     except Exception as e :
         return f" there is an error while getting the weather information : {str(e)}"
