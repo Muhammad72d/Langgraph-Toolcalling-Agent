@@ -25,8 +25,8 @@ if user_input:
         response = app.invoke({"messages":[("human",user_input)]},
                               config={"configurable": {"thread_id": "streamlit_user"}})
         
-        assistant_response = response["messages"][-1].content
-        st.markdown(assistant_response[0]["text"])
+        assistant_response = response["messages"][-1]
+        st.markdown(assistant_response)
 
         st.session_state.messages.append({"role":"assistant",
                                           "content":assistant_response})
