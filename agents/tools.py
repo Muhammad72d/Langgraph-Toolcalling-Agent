@@ -54,7 +54,7 @@ def get_weather(location:str) -> str:
     params = {
         "latitude": latitude,
         "longitude": longitude,
-        "current": True,
+        "current": "temperature_2m,wind_speed_10m,wind_direction_10m",
         "timezone": timezone
     }
     try:
