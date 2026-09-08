@@ -1,5 +1,6 @@
 import streamlit as st
 from agents.graph import app
+from agents.functions import extract_text
 
 st.set_page_config(
     page_title="LangGraph Agent",
@@ -25,7 +26,7 @@ if user_input:
         response = app.invoke({"messages":[("human",user_input)]},
                               config={"configurable": {"thread_id": "streamlit_user"}})
         
-        assistant_response = response["messages"][-1].content
+        assistant_response = extract_text(response["messages"][-1].content)
         st.markdown(assistant_response)
 
         st.session_state.messages.append({"role":"assistant",
